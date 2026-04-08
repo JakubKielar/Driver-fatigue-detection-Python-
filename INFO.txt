@@ -1,0 +1,7 @@
+dodatkowo trzeba zainstalować bibliotekę dlib: dlib-19.22.99-cp310-cp310-win_amd64.whl
+
+Działanie algorytmu detekcji pozycji głowy: algorytm wyznacza środek linii oczu (pomiędzy zewnętrznymi kącikami) oraz pozycję czubka nosa, obliczana jest pionowa odległość między nosem a linią oczu, wartość jest normalizowana względem szerokości między zewnętrznymi kącikami oczu, co uniezależnia pomiar od odległości kierowcy od kamery.
+
+wersja Pythona - 3.10.11
+
+W programie wystarczy zmienić ścieżki na własne. 
