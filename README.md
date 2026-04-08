@@ -1,3 +1,26 @@
 # Driver-fatigue-detection-Python-
 
-Projekt inżynierski zrealizowany na kierunku Automatyka i Robotyka (specjalność: Technologie Informacyjne) na Wydziale Automatyki, Elektroniki i Informatyki Politechniki Śląskiej.Opis projektuGłównym celem projektu było zaprojektowanie i wdrożenie aplikacji do detekcji zmęczenia kierowcy w czasie rzeczywistym. System wykorzystuje bezinwazyjną analizę obrazu wideo, łącząc klasyczne metody geometryczne z zaawansowaną analizą emocji.Kluczowe innowacje:Weryfikacja ziewania przez emocje: System odróżnia ziewanie od śmiechu lub rozmowy, sprawdzając, czy otwarciu ust towarzyszą negatywne mikroekspresje (np. smutek, strach).Analiza czasowa: Algorytmy analizują sekwencje zdarzeń (szeregi czasowe), a nie tylko pojedyncze klatki, co zwiększa stabilność detekcji.Lekka estymacja pozycji głowy: Autorska metoda Head Pose 2D pozwalająca na wykrywanie opadania głowy (mikrosnu) przy niskiej złożoności obliczeniowej.Architektura systemuSystem pracuje w modelu potokowym (pipeline), wykonując następujące kroki dla każdej klatki obrazu:Akwizycja obrazu (OpenCV).Ekstrakcja cech: Detekcja 68 punktów charakterystycznych twarzy (Dlib).Analiza geometryczna: Obliczanie wskaźników EAR (oczy), MAR (usta) oraz Head Pose.Klasyfikacja emocji: Wykorzystanie sieci neuronowej EfficientNetB0 (TensorFlow/Keras).Fuzja danych: Wyliczenie kompleksowego Wskaźnika Zmęczenia (Fatigue Index).TechnologieJęzyk: Python 3.10 Biblioteki:OpenCV (przetwarzanie wideo) Dlib (facial landmarks) TensorFlow/Keras (uczenie maszynowe) NumPy/SciPy (operacje macierzowe) Zbiór danych: YawDD (Yawning Detection Dataset) Struktura projektu/src – kod źródłowy aplikacji./models – wytrenowany model EfficientNetB0 do rozpoznawania emocji./docs – dokumentacja i fragmenty pracy inżynierskiej.README.md – ten plik.Wyniki badańSkuteczność systemu została zweryfikowana na zbiorze YawDD. Algorytm wykazał wysoką odporność na przypadki trudne, takie jak kierowcy w okularach korekcyjnych oraz sytuacje generujące fałszywe alarmy (np. głośny śmiech).
+[cite_start]Projekt inżynierski zrealizowany na kierunku Automatyka i Robotyka (specjalność: Technologie Informacyjne) na Wydziale Automatyki, Elektroniki i Informatyki Politechniki Śląskiej[cite: 1, 6].
+
+## Opis projektu
+[cite_start]Głównym założeniem pracy było zaprojektowanie oraz wdrożenie aplikacji umożliwiającej detekcję zmęczenia kierowcy w czasie rzeczywistym[cite: 13]. [cite_start]System opiera się na bezinwazyjnej analizie obrazu wideo, integrując moduły detekcji twarzy i rozpoznawania emocji w jeden spójny system decyzyjny[cite: 14].
+
+### Kluczowe funkcjonalności:
+* [cite_start]**Analiza czasowa**: Algorytmy opracowane do analizy danych w dziedzinie czasu pozwalają szacować ryzyko zaśnięcia na podstawie sekwencji zdarzeń[cite: 15, 16].
+* [cite_start]**Head Pose Estimation**: Moduł estymacji pozycji głowy bazujący na geometrii 2D, wykrywający opadanie głowy przy niskiej złożoności obliczeniowej[cite: 17, 18].
+* [cite_start]**Weryfikacja ziewania**: Mechanizm wspierany analizą emocji, który odróżnia ziewanie od śmiechu czy rozmowy poprzez detekcję mikroekspresji negatywnych[cite: 19, 20].
+* [cite_start]**Fatigue Index**: Końcowa ocena stanu kierowcy bazująca na fuzji danych, uwzględniająca m.in. metrykę PERCLOS[cite: 21, 34].
+
+## Technologie i narzędzia
+* [cite_start]**Język**: Python 3.10[cite: 214].
+* [cite_start]**Przetwarzanie obrazu**: OpenCV 4.9.0 oraz Dlib 19.24.4 (model 68 punktów charakterystycznych)[cite: 221, 227, 228].
+* [cite_start]**Uczenie maszynowe**: TensorFlow i Keras (architektura EfficientNetB0 do klasyfikacji emocji)[cite: 233, 234].
+* [cite_start]**Zbiór danych**: Baza wideo YawDD[cite: 241].
+
+## Wyniki
+[cite_start]Poprawność działania algorytmów została zweryfikowana na zbiorze YawDD, ze szczególnym uwzględnieniem przypadków trudnych, takich jak obecność okularów korekcyjnych u kierowcy[cite: 22, 35].
+
+---
+[cite_start]**Autor**: Jakub Kielar [cite: 4]  
+**Prowadzący**: dr hab. inż. Sebastian Budzan, prof. Pol. [cite_start]Śl. [cite: 8]  
+[cite_start]**Uczelnia**: Politechnika Śląska, Gliwice 2026 [cite: 1, 9]
